@@ -1,0 +1,36 @@
+{
+  "name": "kafka-node-example",
+  "version": "1.0.0",
+  "description": "kafka-node lib example that calls a kafka producer through requests and consumes its own messages.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/index.js --ignore __tests__/",
+    "start-debug": "nodemon --exec babel-node src/index.js --debug --ignore __tests__/",
+    "windows": "nodemon src/index.js --ignore __tests__/",
+    "test": "jest --no-cache --silent --watch __tests__/ --verbose --coverage --runInBand --detectOpenHandles",
+    "clean": "rm -rf dist/",
+    "build": "npm run clean && babel src/ -d dist/ -s --ignore __tests__/",
+    "prod": "node dist/index.js"
+  },
+  "author": "Thiago Ripardo",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "kafka-node": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "babel-jest": "^25.1.0",
+    "dotenv": "^8.2.0",
+    "jest": "^25.1.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
+  }
+}

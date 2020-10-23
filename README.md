@@ -1,2 +1,2 @@
-# simple-node-example
-Simple node example ready for deployment in multiples platforms
+# kafka-node-example
+kafka-node lib example that calls a kafka producer through requests and consumes its own messages.
